@@ -53,80 +53,68 @@
             align-items: flex-end; /* Align items to the right */
         }
         header .buttons {
-    display: flex;
-    gap: 1rem; /* Space between buttons */
-    margin-bottom: 0.5rem;
-    align-items: center;
-    position: relative;
-}
+            display: flex;
+            gap: 1rem; /* Space between buttons */
+            margin-bottom: 0.5rem;
+            align-items: center;
+            position: relative;
+        }
 
-header .buttons {
-    display: flex;
-    gap: 1rem; /* Space between buttons */
-    margin-bottom: 0.5rem;
-    align-items: center;
-    position: relative;
-}
+        header .buttons {
+            display: flex;
+            gap: 1rem; /* Space between buttons */
+            margin-bottom: 0.5rem;
+            align-items: center;
+            position: relative;
+        }
 
-header .social-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 58px; /* Size of the circular button */
-    height: 58px;
-    border-radius: 50%; /* Makes the button circular */
-    background-color: #fff; /* White background */
-    color: #000; /* Black icon */
-    text-decoration: none;
-    font-size: 30px; /* Icon size */
-    border: 2px solid transparent; /* Invisible border by default */
-    position: relative; /* Ensure positioning context */
-    overflow: hidden; /* Hide overflow to ensure smooth animation */
-    transition: color 0.8s, background-color 0.8s, border-color 0.8s; /* Smooth transition for icon color, background color, and border color */
-    transition-delay: 0s, 0s, 0.1s; /* Delay border color transition by 0.1s */
-}
+        header .social-btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 58px; /* Size of the circular button */
+            height: 58px;
+            border-radius: 50%; /* Makes the button circular */
+            background-color: #fff; /* White background */
+            color: #000; /* Black icon */
+            text-decoration: none;
+            font-size: 30px; /* Icon size */
+            border: 2px solid transparent; /* Invisible border by default */
+            position: relative; /* Ensure positioning context */
+            overflow: hidden; /* Hide overflow to ensure smooth animation */
+            transition: color 0.8s, background-color 0.8s, border-color 0.8s; /* Smooth transition for icon color, background color, and border color */
+            transition-delay: 0s, 0s, 0.1s; /* Delay border color transition by 0.1s */
+        }
 
-header .social-btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%; /* Large enough to cover the button */
-    height: 300%;
-    background-color: #000; /* Black overlay */
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0); /* Start scaled down */
-    transition: transform .8s; /* Smooth transition for scale */
-    z-index: 0; /* Behind the button content */
-    pointer-events: none; /* Ensure pseudo-element doesn’t block interactions */
-}
+        header .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%; /* Large enough to cover the button */
+            height: 300%;
+            background-color: #000; /* Black overlay */
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0); /* Start scaled down */
+            transition: transform .8s; /* Smooth transition for scale */
+            z-index: 0; /* Behind the button content */
+            pointer-events: none; /* Ensure pseudo-element doesn’t block interactions */
+        }
 
-header .social-btn:hover::before {
-    transform: translate(-50%, -50%) scale(1); /* Scale up to cover the button */
-}
+        header .social-btn:hover::before {
+            transform: translate(-50%, -50%) scale(1); /* Scale up to cover the button */
+        }
 
-header .social-btn:hover {
-    color: #fff; /* Change icon color to white on hover */
-    background-color: #000; /* Change button background to black on hover */
-    border-color: #fff; /* Keep border color transparent on hover */
-}
+        header .social-btn:hover {
+            color: #fff; /* Change icon color to white on hover */
+            background-color: #000; /* Change button background to black on hover */
+            border-color: #fff; /* Keep border color transparent on hover */
+        }
 
-header .social-btn i {
-    position: relative; /* Ensure the icon is above the pseudo-element */
-    z-index: 1; /* Ensure icon is above the overlay */
-}
-
-
-
-
-
-
-
-
-
-        
-
-
+        header .social-btn i {
+            position: relative; /* Ensure the icon is above the pseudo-element */
+            z-index: 1; /* Ensure icon is above the overlay */
+        }
 
         header .right p {
             margin: 0;
@@ -228,7 +216,7 @@ header .social-btn i {
         </div>
         <div class="right">
             <div class="buttons">
-                <a href="https://github.com/your-github-username" class="social-btn" aria-label="GitHub">
+                <a href="https://github.com/jlafleur9" class="social-btn" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/your-linkedin-username" class="social-btn" aria-label="LinkedIn">
