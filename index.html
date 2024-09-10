@@ -13,8 +13,8 @@
             padding: 0;
             background-color: #333; /* Background color for entire page */
             color: #fff; /* Default text color to match the h1 color */
-            padding-left: 10rem;
-            padding-right: 10rem;
+            padding-left: 15rem;
+            padding-right: 15rem;
         }
 
         header {
@@ -52,14 +52,6 @@
             flex-direction: column;
             align-items: flex-end; /* Align items to the right */
         }
-        header .buttons {
-            display: flex;
-            gap: 1rem; /* Space between buttons */
-            margin-bottom: 0.5rem;
-            align-items: center;
-            position: relative;
-        }
-
         header .buttons {
             display: flex;
             gap: 1rem; /* Space between buttons */
@@ -135,8 +127,8 @@
 
         .profile img {
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            width: 250px;
+            height: 250px;
             object-fit: cover;
             margin-bottom: 1rem;
         }
@@ -168,6 +160,22 @@
             color: #ddd; /* Lighter text color for project descriptions */
         }
 
+        .horizontal-line{
+            width: 100%;
+            height: 10px;
+            background-color: #fff;
+            margin: 1rem 0;
+        }
+        .resume-link {
+            color: #fff; /* White text color */
+            text-decoration: none; /* No underline by default */
+        }
+
+        .resume-link:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+
 
         /* Media Query for smaller screens */
         @media (max-width: 950px) {
@@ -194,12 +202,25 @@
             }
 
             header .buttons {
-                margin-bottom: 1rem;
+                display: flex;
+                gap: 1rem; /* Space between buttons */
+                margin-bottom: 0.5rem;
+                align-items: center;
+                position: relative;
+                
             }
 
             header .social-btn {
-                display: block;
-                margin: 0.5rem auto; /* Center-align buttons when wrapping */
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 58px; /* Size of the circular button */
+                height: 58px;
+                border-radius: 50%; /* Makes the button circular */
+                background-color: #fff; /* White background */
+                color: #000; /* Black icon */
+                text-decoration: none;
+                font-size: 30px; 
             }
 
             header h2 {
@@ -216,24 +237,29 @@
         </div>
         <div class="right">
             <div class="buttons">
-                <a href="https://github.com/jlafleur9" class="social-btn" aria-label="GitHub">
+                <a href="https://github.com/jlafleur9" class="social-btn" aria-label="GitHub" target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/your-linkedin-username" class="social-btn" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/jeffrey-lafleur/" class="social-btn" aria-label="LinkedIn" target="_blank">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="mailto:example@example.com" class="social-btn" aria-label="Email">
+                <a href="jeffreylafleur9@gmail.com" class="social-btn" aria-label="Email" target="_blank">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
-            <p>example@example.com</p>
-            <p>Resume:</p>
+            <p>jeffreylafleur9@gmail.com</p>
+            <p>
+                <a href="https://drive.google.com/file/d/1Pex6jjg0WRop0YMGxzfMqLLeRDUKNgHW/view?usp=drive_link" target="_blank" class="resume-link">
+                    Resume
+                </a>
+            </p>
         </div>
     </header>
+    <div class="horizontal-line"></div>
 
     <div class="container">
         <div class="profile">
-            <img src="your-photo-url.jpg" alt="Jeffrey LaFleur">
+            <img src="images/BruceCopy.jpg" alt="Jeffrey LaFleur">
             <p>Hello! I'm Jeffrey LaFleur, a full-stack developer with a passion for creating innovative solutions.</p>
         </div>
 
