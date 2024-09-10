@@ -115,15 +115,21 @@
         }
 
         .container {
-            width: 100%;
+            width:100%;
             margin: auto;
             overflow: hidden;
             background-color: #333; /* Background color for the container */
+            display: flex; /* Align items horizontally */
+            justify-content: space-between; /* Space out the image and text */
+            align-items: center; /* Center vertically */
         }
 
         .profile {
-            text-align: center;
-            margin: 2rem 0;
+            display: flex;
+            flex-direction: row-reverse; /* Moves the image to the right and text to the left */
+            align-items: center; /* Aligns items vertically in the center */
+            margin-top: 2rem;
+            width: 100%;
         }
 
         .profile img {
@@ -131,7 +137,7 @@
             width: 250px;
             height: 250px;
             object-fit: cover;
-            margin-bottom: 1rem;
+            margin-left: 1rem;
         }
 
         .profile p {
@@ -149,16 +155,56 @@
             margin: 1rem 0;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Darker shadow for contrast */
+            display: flex; /* Use flexbox to align the image and text side by side */
         }
 
-        .project h3 {
-            margin-top: 0;
-            color: #fff; /* Text color for project titles */
+        .project img.pro {
+            margin-right: 1rem; /* Space between image and text */
+            width: 200px; /* Set the desired width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Optional: round the image corners */
+            object-fit: cover; /* Ensure image covers the container without distortion */
         }
 
-        .project p {
-            margin-bottom: 0;
-            color: #ddd; /* Lighter text color for project descriptions */
+        .project-details {
+            display: flex;
+            flex-direction: column; /* Stack details vertically */
+            flex: 1; /* Take up remaining space */
+        }
+
+        .details-header {
+            display: flex;
+            justify-content: space-between; /* Space out title and date */
+            align-items: center; /* Align items vertically */
+        }
+        .project-title-link{
+            text-decoration: none;
+        }
+
+        .project-title {
+            font-size: 2em;
+            color: #fff; /* Text color for project title */
+            margin: 0; /* Remove default margin */
+            text-decoration: none;
+        }
+        .project-title:hover {
+                    text-decoration: underline; /* Underline on hover */
+                }
+
+        .project-date {
+            color: #fff; /* Lighter text color for date */
+            margin: 0; /* Remove default margin */
+            font: 1.25em sans-serif;
+        }
+
+        .project-technologies {
+            color: #fff; /* Lighter text color for technologies */
+            margin: 0.5rem 0; /* Add some space above and below */
+        }
+
+        .project-description {
+            color: #fff; /* Lighter text color for description */
+            margin: 0.5rem 0; /* Add some space above and below */
         }
         .section-title {
             text-align: center; /* Center-align the text */
@@ -260,11 +306,63 @@
         .spacer{
             margin:2rem;
         }
-        
-        
+        form {
+            max-width: 600px; /* Limit the form width */
+            margin: 1rem auto; /* Center the form */
+            padding: 1rem;
+            background-color: #444; /* Background color for contrast */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        form button{
+            display: block;
+            margin: 1rem auto;
+        }
 
+        label {
+            display: block;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
 
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 97%;
+            padding: 0.5rem;
+            border: 1px solid #666;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+        }
 
+        textarea {
+            resize: vertical; /* Allow vertical resizing */
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #form-message {
+            color: #0f0; /* Success message color */
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .hidden {
+            display: none; /* Hide the message by default */
+        }
 
         /* Media Query for smaller screens */
         @media (max-width: 950px) {
@@ -339,7 +437,10 @@
             <p>jeffreylafleur9@gmail.com</p>
             <p>
                 <a href="https://drive.google.com/file/d/1Pex6jjg0WRop0YMGxzfMqLLeRDUKNgHW/view?usp=drive_link" target="_blank" class="resume-link">
-                    Resume
+                    Resume: 
+                </a>
+                <a href="path_to_resume_file.pdf" download aria-label="Download Resume" class="resume-link">
+                    <i class="fas fa-download"></i>
                 </a>
             </p>
         </div>
@@ -353,7 +454,10 @@
     <div class="container">
         <div class="profile">
             <img src="images/BruceCopy.jpg" alt="Jeffrey LaFleur">
-            <p>Hello! I'm Jeffrey LaFleur, a full-stack developer with a passion for creating innovative solutions.</p>
+            <p>Hello! I'm Jeffrey LaFleur, a full-stack developer with a passion for creating innovative solutions.
+                Hello! I'm Jeffrey LaFleur, a full-stack developer with a passion for creating innovative solutions.
+                Hello! I'm Jeffrey LaFleur, a full-stack developer with a passion for creating innovative solutions.
+            </p>
         </div>
     </div>
     
@@ -366,20 +470,58 @@
     
     <div class="projects">
         <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of your first project. Explain what it does, the technologies used, and the impact it had.</p>
+            <a href="https://github.com/jlafleur9" class="project-link" target="_blank">
+                <img src="images/TwitterApi.jpg" alt="Project 1 Image" class="pro">
+            </a>
+            <div class="project-details">
+                <div class="details-header">
+                    <a href="https://github.com/jlafleur9" class="project-title-link" target="_blank">
+                        <p class="project-title">Twitter API</p>
+                    </a>
+                    <p class="project-date">8/24 - Present</p>
+                </div>
+                <p class="project-technologies">Restful, Java, Spring Boot</p>
+                <p class="project-description">
+                    Description of your first project. Explain what it does, the technologies used, and the impact it had.
+                </p>
+            </div>
         </div>
-    
         <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of your second project. Include details about your role and the challenges you overcame.</p>
+            <a href="https://github.com/jlafleur9" class="project-link" target="_blank">
+                <img src="images/TwitterApi.jpg" alt="Project 1 Image" class="pro">
+            </a>
+            <div class="project-details">
+                <div class="details-header">
+                    <a href="https://github.com/jlafleur9" class="project-title-link" target="_blank">
+                        <p class="project-title">PlaceHolder Project</p>
+                    </a>
+                    <p class="project-date">8/24 - Present</p>
+                </div>
+                <p class="project-technologies">Restful, Java, Spring Boot</p>
+                <p class="project-description">
+                    I expect to add two or three more projects from fast track so I have created the UI elemtns and will fix once projects are complete.
+                </p>
+            </div>
         </div>
-    
         <div class="project">
-            <h3>Project 3</h3>
-            <p>Description of your third project. Highlight any unique features or outcomes.</p>
+            <a href="https://github.com/jlafleur9" class="project-link" target="_blank">
+                <img src="images/TwitterApi.jpg" alt="Project 1 Image" class="pro">
+            </a>
+            <div class="project-details">
+                <div class="details-header">
+                    <a href="https://github.com/jlafleur9" class="project-title-link" target="_blank">
+                        <p class="project-title">Carnival React</p>
+                    </a>
+                    <p class="project-date">05/23 - 12/23</p>
+                </div>
+                <p class="project-technologies">React.JS, TypeScript</p>
+                <p class="project-description">
+                    Developed a storefront for a client using React and TypeScript. Implemented UI elements and integrated authentication features to enhance user experience and security. 
+                </p>
+            </div>
         </div>
     </div>
+
     <div class="spacer"></div>
     
     <div class="section-title">
@@ -435,8 +577,64 @@
             </div>
             <p class="work-description">Customer Service</p>
         </div>
+    </div>  
+    
+    <div class="spacer"></div>
+    <div class="section-title">
+        <h2>Contact Me</h2>
     </div>
-        
-    </div>
+    <div class="horizontal-line"></div>
+
+    <form
+        id="contact-form"
+        action="https://formspree.io/f/xzzpqpaw"
+        method="POST"
+    >
+        <label for="name">
+            Your Name:
+            <input type="text" id="name" name="name" required>
+        </label>
+        <label for="email">
+            Your Email:
+            <input type="email" id="email" name="email" required>
+        </label>
+        <label for="message">
+            Your Message:
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit">Send</button>
+    </form>
+    <p id="form-message" class="hidden"></p>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            var form = event.target;
+            var formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('form-message').innerText = 'Thank you! Your message has been sent.';
+                    document.getElementById('form-message').classList.remove('hidden');
+                    form.reset(); // Reset the form fields
+                } else {
+                    document.getElementById('form-message').innerText = 'Oops! There was a problem sending your message.';
+                    document.getElementById('form-message').classList.remove('hidden');
+                }
+            })
+            .catch(error => {
+                document.getElementById('form-message').innerText = 'Oops! There was a problem sending your message.';
+                document.getElementById('form-message').classList.remove('hidden');
+            });
+        });
+        </script>
 </body>
 </html>
