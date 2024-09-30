@@ -160,8 +160,9 @@
 
         .project img.pro {
             margin-right: 1rem; /* Space between image and text */
+            flex-grow: 1;
             width: 200px; /* Set the desired width */
-            height: auto; /* Maintain aspect ratio */
+            height: 100%; /* Maintain aspect ratio */
             border-radius: 5px; /* Optional: round the image corners */
             object-fit: cover; /* Ensure image covers the container without distortion */
         }
@@ -510,6 +511,61 @@
     
     <div class="projects">
         <div class="project">
+            <a href="https://github.com/jlafleur9/Admin-Web-Portal" class="project-link" target="_blank">
+                <img src="images/Final2.PNG" alt="Project 1 Image" class="pro">
+            </a>
+            <div class="project-details">
+                <div class="details-header">
+                    <a href="https://github.com/jlafleur9/Admin-Web-Portal" class="project-title-link" target="_blank">
+                        <p class="project-title">Admin Web Portal</p>
+                    </a>
+                    <p class="project-date">09/24</p>
+                </div>
+                <p class="project-technologies">Angular, Spring-Boot, Java, JavaScript, HTML, CSS, PostgreSQL</p>
+                <p class="project-description">
+                    Web portal for internal company use that allows employees to login to view company related information. Also implemented features for
+                    administrators to manage the website and its users.  
+                </p>
+            </div>
+        </div>
+        <div class="project">
+            <a href="https://github.com/jlafleur9/Whos-Who" class="project-link" target="_blank">
+                <img src="images/TwitterApi.jpg" alt="Project 1 Image" class="pro">
+            </a>
+            <div class="project-details">
+                <div class="details-header">
+                    <a href="https://github.com/jlafleur9/Whos-Who" class="project-title-link" target="_blank">
+                        <p class="project-title">Spotify Guessing Game</p>
+                    </a>
+                    <p class="project-date">09/24</p>
+                </div>
+                <p class="project-technologies">Angular, Javascript, RESTful, HTML, CSS, SpotifyAPI</p>
+                <p class="project-description">
+                    Music selection game that plays music to users and allows them to guess the artist of the song playing. Users can change difficult and genre of the game
+                    . Users play for a high score which will display on a leaderboard. Game Uses spotify's api to get songs.
+                </p>
+            </div>
+        </div>
+        
+        <div class="project">
+            <a href="https://github.com/jlafleur9/Dev-Duel" class="project-link" target="_blank">
+                <img src="images/DevDuel2.PNG" alt="Project 1 Image" class="pro">
+            </a>
+            <div class="project-details">
+                <div class="details-header">
+                    <a href="https://github.com/jlafleur9/Dev-Duel" class="project-title-link" target="_blank">
+                        <p class="project-title">Dev-Duel</p>
+                    </a>
+                    <p class="project-date">0924</p>
+                </div>
+                <p class="project-technologies">Angular, JavaScript, HTML, CSS</p>
+                <p class="project-description">
+                    Battle two github users in a head to head format. Users can inspect any github account for detailed stats, or chose two users to see which one is 
+                    the winner.
+                </p>
+            </div>
+        </div>
+        <div class="project">
             <a href="https://github.com/jlafleur9/TwitterAPI" class="project-link" target="_blank">
                 <img src="images/TwitterApi.jpg" alt="Project 1 Image" class="pro">
             </a>
@@ -524,23 +580,6 @@
                 <p class="project-description">
                     Implementation of Restful API calls to allow users to perform a variety of tasks. Service connected with a mySQL 
                     database to handle transactions and information passing. 
-                </p>
-            </div>
-        </div>
-        <div class="project">
-            <a href="https://github.com/jlafleur9" class="project-link" target="_blank">
-                <img src="images/TwitterApi.jpg" alt="Project 1 Image" class="pro">
-            </a>
-            <div class="project-details">
-                <div class="details-header">
-                    <a href="https://github.com/jlafleur9" class="project-title-link" target="_blank">
-                        <p class="project-title">PlaceHolder Project</p>
-                    </a>
-                    <p class="project-date"></p>
-                </div>
-                <p class="project-technologies">Restful, Java, Spring Boot</p>
-                <p class="project-description">
-                    I expect to add two or three more projects from fast track so I have created the UI elements and will fix once projects are complete.
                 </p>
             </div>
         </div>
